@@ -28,13 +28,10 @@ app.use("/api/v1/vote", vote);
 app.use("/api/v1/comment", comment);
 app.use("/api/v1/followers_followings", followerFollowing);
 app.use("/api/v1/save-poll", savePoll);
-app.use('/api/v1/profile-image', express.static(__dirname + '/uploads/profile_image')); // route to  serve the static file(profile image in this project)
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
 
-
-// Catch-all route to serve the React app
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    res.sendFile(path.join(__dirname, '/dist/index.html'));
 });
 
 //using error middlewares
