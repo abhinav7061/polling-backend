@@ -1,0 +1,1 @@
+import{r as c}from"./index-4f8d315e.js";function h(t){const e=window.matchMedia(t),[a,s]=c.useState(e.matches);return c.useEffect(()=>{e.matches!==a&&s(e.matches);const n=()=>{s(e.matches)};return e.addEventListener("change",n),()=>{e.removeEventListener("change",n)}},[t]),a}export{h as u};
