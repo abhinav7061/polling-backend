@@ -1,0 +1,1 @@
+import{r as s,U as r,u as n}from"./index-9aec5bf0.js";import{w as a}from"./index-115b0bce.js";const c=({children:o})=>{const{userInfo:t}=s.useContext(r),e=n();return s.useEffect(()=>{t||(e("/login"),a.info("Login First To Access The Resources"))},[t,e]),t?o:null};export{c as default};

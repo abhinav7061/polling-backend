@@ -1,0 +1,1 @@
+import{j as p}from"./index-9aec5bf0.js";const s=({styles:t,title:o,type:n,onclicks:e})=>p.jsx("button",{type:n,className:`font-poppins font-bold text-[18px] text-primary bg-blue-gradient rounded-[10px] outline-none ${t}`,onClick:e,children:o});export{s as B};
