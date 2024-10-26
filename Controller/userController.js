@@ -128,10 +128,6 @@ exports.verifyAccount = async (req, res) => {
     const options = {
       expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
-      secure: true,
-      sameSite: 'none',
-      domain: 'mern-polling.onrender.com',
-      path: '/',
     };
     res.status(200).cookie("token", token, options).json({
       success: true,
@@ -190,10 +186,6 @@ exports.loginUser = async (req, res) => {
     const options = {
       expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
-      secure: true,
-      sameSite: 'none',
-      domain: 'mern-polling.onrender.com',
-      path: '/'
     };
     res.status(200).cookie("token", token, options).json({
       success: true,
