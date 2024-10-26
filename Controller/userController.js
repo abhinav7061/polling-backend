@@ -130,6 +130,7 @@ exports.verifyAccount = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'none',
+      domain: 'https://pollsphere.vercel.app'
     };
     res.status(200).cookie("token", token, options).json({
       success: true,
@@ -190,6 +191,7 @@ exports.loginUser = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'none',
+      domain: 'https://pollsphere.vercel.app'
     };
     res.status(200).cookie("token", token, options).json({
       success: true,
