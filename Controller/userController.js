@@ -130,7 +130,8 @@ exports.verifyAccount = async (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: 'none',
-      domain: 'https://pollsphere.vercel.app'
+      domain: 'https://pollsphere.vercel.app',
+      path: '/',
     };
     res.status(200).cookie("token", token, options).json({
       success: true,
