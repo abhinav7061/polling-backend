@@ -128,7 +128,7 @@ exports.verifyAccount = async (req, res) => {
     const options = {
       expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: process.env.NODE_ENV == 'production',
       sameSite: 'none',
       domain: 'https://pollsphere.vercel.app'
     };
@@ -189,7 +189,7 @@ exports.loginUser = async (req, res) => {
     const options = {
       expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: process.env.NODE_ENV == 'production',
       sameSite: 'none',
       domain: 'https://pollsphere.vercel.app'
     };
