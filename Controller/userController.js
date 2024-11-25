@@ -113,7 +113,7 @@ exports.registerUser = async (req, res) => {
 exports.verifyAccount = async (req, res) => {
   try {
     const { email, otp } = req.body;
-    const user = await User.findOne({ email }).select('name email myStatus');
+    const user = await User.findOne({ email }).select('name email myStatus otp otpExpires isVerified avatar');
     if (!user) return sendErrorResponse(res, 404, "User not found");
     if (user.isVerified) return sendErrorResponse(res, 400, "Account already verified");
     if (user.otpExpires < Date.now()) return sendErrorResponse(res, 400, "OTP has expired");
